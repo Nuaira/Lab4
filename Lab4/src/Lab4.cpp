@@ -7,6 +7,10 @@
 //============================================================================
 
 #include <iostream>
+#include <string>
+#include "BloodTests.hpp"
+#include "File.hpp"
+
 using namespace std;
 
 int main() {
