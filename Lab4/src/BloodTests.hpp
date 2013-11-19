@@ -58,11 +58,13 @@ class BloodGlucose{	// Derived Class 2
 
 protected:
 
-	//
+	int PlasmaGnumber;
+	string diagnosis;
 
 public:
 
 	BloodGlucose(const int myrangemale, const int myrangefemale, const int myunit);
+	void PlasmaGlucose();
 
 };
 
@@ -70,11 +72,20 @@ class Lipoprotein{	// Derived Class 3
 
 protected:
 
-	//
+	int TotalCholesterolNumber;
+	int LDLNumber;
+	int HDLNumber;
+
+	string TotalCholesterolCategory;
+	string LDLCategory;
+	string HDLCategory;
 
 public:
 
 	Lipoprotein(const int myrangemale, const int myrangefemale, const int myunit);
+	void TotalCholesterol();
+	void LDL();
+	void HDL();
 
 };
 
