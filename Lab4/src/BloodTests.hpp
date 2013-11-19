@@ -89,6 +89,4 @@ public:
 
 };
 
-//comment
-
 #endif /* BLOODTESTS_HPP_ */
