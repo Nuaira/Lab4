@@ -20,17 +20,19 @@ protected:
 	// result ranges for male and female
 	int rangemale;
 	int rangefemale;
-
 	// units can be: Cells/mcL (cells per microliter), gm/dL (grams per deciliter), femtoliter, or mg/dL (milligrams per deciliter)
 	int unit;
 
+	int gender;
+
 public:
 
-	BloodTests(const int myrangemale, const int myrangefemale, const int myunit);	// Constructor
+	BloodTests();	// Constructor
 
+	//const int myrangemale, const int myrangefemale, const int myunit
 };
 
-class BloodCount{	// Derived Class 1
+class BloodCount:public BloodTests{	// Derived Class 1
 
 protected:
 
@@ -44,7 +46,6 @@ protected:
 
 public:
 
-	BloodCount(const int myrangemale, const int myrangefemale, const int myunit);
 	void RedBloodCell();
 	void WhiteBloodCell();
 	void Platelets();
@@ -54,7 +55,7 @@ public:
 
 };
 
-class BloodGlucose{	// Derived Class 2
+class BloodGlucose: public BloodTests{	// Derived Class 2
 
 protected:
 
@@ -63,12 +64,12 @@ protected:
 
 public:
 
-	BloodGlucose(const int myrangemale, const int myrangefemale, const int myunit);
+	BloodGlucose();
 	void PlasmaGlucose();
 
 };
 
-class Lipoprotein{	// Derived Class 3
+class Lipoprotein: BloodTests{	// Derived Class 3
 
 protected:
 
@@ -82,7 +83,7 @@ protected:
 
 public:
 
-	Lipoprotein(const int myrangemale, const int myrangefemale, const int myunit);
+	Lipoprotein();
 	void TotalCholesterol();
 	void LDL();
 	void HDL();
