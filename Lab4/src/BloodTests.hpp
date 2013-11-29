@@ -41,6 +41,8 @@ protected:
 	int hemanumber;
 	int volumenumber;
 
+	string title1, name1, comment1;
+
 public:
 
 	void RedBloodCell();
@@ -49,6 +51,7 @@ public:
 	void Hemoglobin();
 	void Hematocrit();
 	void MeanCorpuscularVolume();
+	void annotation1();
 
 };
 
@@ -58,14 +61,16 @@ protected:
 
 	int PlasmaGnumber;
 
+	string title2, name2, comment2;
+
 public:
 
-	BloodGlucose();
 	void PlasmaGlucose();
+	void annotation2();
 
 };
 
-class Lipoprotein: BloodTests{	// Derived Class 3
+class Lipoprotein: public BloodTests{	// Derived Class 3
 
 protected:
 
@@ -73,12 +78,14 @@ protected:
 	int LDLNumber;
 	int HDLNumber;
 
+	string title3, name3, comment3;
+
 public:
 
-	Lipoprotein();
 	void TotalCholesterol();
 	void LDL();
 	void HDL();
+	void annotation3();
 
 };
 

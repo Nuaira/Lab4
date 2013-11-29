@@ -12,11 +12,13 @@
 
 using namespace std;
 
-// make annotation!!!
-
 BloodTests::BloodTests(){
 
 	gender = 0;
+
+}
+
+void BloodTests::Information(){
 
 	cout << "Please enter patient's first name:" << endl;
 	cin >> firstname;
@@ -28,7 +30,6 @@ BloodTests::BloodTests(){
 	cin >> gender;
 
 }
-
 // Functions related to Complete Blood Count
 
 void BloodCount::RedBloodCell(){
@@ -41,14 +42,13 @@ void BloodCount::RedBloodCell(){
 	if (gender == 1 && (rbcnumber >= 4 && rbcnumber <= 5)){
 	cout << "The result is within normal range." << endl;
 	}
-	else{
+	else if (gender == 1 && (rbcnumber < 4 || rbcnumber > 5)){
 	cout << "The result is not within normal range." << endl;
 	}
-
-	if (gender == 2 && (rbcnumber >= 5 && rbcnumber <= 6)){
+	else if (gender == 2 && (rbcnumber >= 5 && rbcnumber <= 6)){
 	cout << "The result is within normal range." << endl;
 	}
-	else{
+	else if (gender == 2 && (rbcnumber < 5 || rbcnumber > 6)){
 	cout << "The result is not within normal range." << endl;
 	}
 
@@ -96,14 +96,13 @@ void BloodCount::Hemoglobin(){
 	if (gender == 1 && (hemonumber >= 12 && hemonumber <= 15)){
 	cout << "The result is within normal range." << endl;
 	}
-	else{
+	else if (gender == 1 && (hemonumber < 12 || hemonumber > 15)){
 	cout << "The result is not within normal range." << endl;
 	}
-
-	if (gender == 2 && (hemonumber >= 14 && hemonumber <= 17)){
+	else if (gender == 2 && (hemonumber >= 14 && hemonumber <= 17)){
 	cout << "The result is within normal range." << endl;
 	}
-	else{
+	else if (gender == 2 && (hemonumber < 14 || hemonumber > 17)){
 	cout << "The result is not within normal range." << endl;
 	}
 
@@ -119,14 +118,14 @@ void BloodCount::Hematocrit(){
 	if (gender == 1 && (hemanumber >= 36 && hemanumber <= 44)){
 	cout << "The result is within normal range." << endl;
 	}
-	else{
+	else if (gender == 1 && (hemanumber < 36 || hemanumber > 44)){
 	cout << "The result is not within normal range." << endl;
 	}
 
-	if (gender == 2 && (hemanumber >= 41 && hemanumber <= 50)){
+	else if (gender == 2 && (hemanumber >= 41 && hemanumber <= 50)){
 	cout << "The result is within normal range." << endl;
 	}
-	else{
+	else if (gender == 2 && (hemanumber < 41 || hemanumber > 50)){
 	cout << "The result is not within normal range." << endl;
 	}
 
@@ -148,7 +147,18 @@ void BloodCount::MeanCorpuscularVolume(){
 
 }
 
-// Function related to Blood Glucose
+void BloodCount::annotation1(){
+
+	cout << "Enter your occupation - Doctor or Nurse:" << endl;
+	cin >> title1;
+	cout << "Enter your name:" << endl;
+	cin >> name1;
+	cout << "Enter your comment:" << endl;
+	cin >> comment1;
+
+}
+
+// Functions related to Blood Glucose
 
 void BloodGlucose::PlasmaGlucose(){
 
@@ -166,6 +176,17 @@ void BloodGlucose::PlasmaGlucose(){
 	else if (PlasmaGnumber >= 126){
 	cout << "The diagnosis is: Diabetes" << endl;
 	}
+}
+
+void BloodGlucose::annotation2(){
+
+	cout << "Enter your occupation - Doctor or Nurse:" << endl;
+	cin >> title2;
+	cout << "Enter your name:" << endl;
+	cin >> name2;
+	cout << "Enter your comment:" << endl;
+	cin >> comment2;
+
 }
 
 // Functions related to Lipoprotein
@@ -233,4 +254,13 @@ void Lipoprotein::HDL(){
 
 }
 
+void Lipoprotein::annotation3(){
+
+	cout << "Enter your occupation - Doctor or Nurse:" << endl;
+	cin >> title3;
+	cout << "Enter your name:" << endl;
+	cin >> name3;
+	cout << "Enter your comment:" << endl;
+	cin >> comment3;
+}
 
