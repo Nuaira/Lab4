@@ -17,19 +17,16 @@ class BloodTests{	// Base Class
 
 protected:
 
-	// result ranges for male and female
-	int rangemale;
-	int rangefemale;
-	// units can be: Cells/mcL (cells per microliter), gm/dL (grams per deciliter), femtoliter, or mg/dL (milligrams per deciliter)
-	int unit;
+	string firstname;
+	string lastname;
 
 	int gender;
 
 public:
 
 	BloodTests();	// Constructor
+	void Information();
 
-	//const int myrangemale, const int myrangefemale, const int myunit
 };
 
 class BloodCount:public BloodTests{	// Derived Class 1
@@ -60,7 +57,6 @@ class BloodGlucose: public BloodTests{	// Derived Class 2
 protected:
 
 	int PlasmaGnumber;
-	string diagnosis;
 
 public:
 
@@ -76,10 +72,6 @@ protected:
 	int TotalCholesterolNumber;
 	int LDLNumber;
 	int HDLNumber;
-
-	string TotalCholesterolCategory;
-	string LDLCategory;
-	string HDLCategory;
 
 public:
 
